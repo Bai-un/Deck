@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Flex, Text, Box, useToast, Spinner, SimpleGrid, Progress, Collapse, Button } from '@chakra-ui/react'
-import { HardDrive, ChevronDown, ChevronRight } from 'lucide-react'
+import { Flex, Text, Box, useToast, Spinner, SimpleGrid } from '@chakra-ui/react'
+import { HardDrive } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { PageContainer } from '../components/ui/PageContainer'
 import { DiskCard } from '../components/tools/DiskCard'

@@ -1,5 +1,5 @@
-import { Flex, Box, IconButton } from '@chakra-ui/react'
-import { Minus, Square, X, Monitor } from 'lucide-react'
+import { Flex, Box, IconButton, Image } from '@chakra-ui/react'
+import { Minus, Square, X } from 'lucide-react'
 import { getCurrentWindow } from '../../lib/tauri'
 import { useTranslation } from 'react-i18next'
 
@@ -36,7 +36,12 @@ export function TitleBar() {
     >
       {/* App icon + name */}
       <Flex align="center" gap={2} px={3} data-tauri-drag-region>
-        <Monitor size={14} color="#6C63FF" />
+        <Image
+          src="/app-icon.png"
+          alt="Deck"
+          boxSize="16px"
+          data-tauri-drag-region
+        />
         <Box
           as="span"
           fontSize="sm"

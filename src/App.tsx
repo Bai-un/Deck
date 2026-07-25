@@ -103,7 +103,6 @@ function AppRoutes() {
 function App() {
   const [ready, setReady] = useState(false)
   const fetchSystemInfo = useHardwareStore((s) => s.fetchSystemInfo)
-  const loadSettings = useSettingsStore.persist?.onFinishHydration
 
   const init = useCallback(async () => {
     try {

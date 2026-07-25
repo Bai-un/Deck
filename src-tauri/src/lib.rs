@@ -5,11 +5,13 @@ mod utils;
 
 use services::hardware::HardwareMonitor;
 use tauri::{
+    image::Image,
     menu::{Menu, MenuItem, PredefinedMenuItem},
     tray::MouseButton,
     tray::TrayIconBuilder,
     Emitter, Manager, WindowEvent,
 };
+use tauri_plugin_log::{Target, TargetKind};
 
 fn setup_tray(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
     let show = MenuItem::with_id(app, "show", "显示主窗口", true, None::<&str>)?;
@@ -42,14 +44,22 @@ fn setup_tray(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
         ],
     )?;
 
+    // Build tray icon from embedded PNG
+    let icon_png = include_bytes!("../icons/32x32.png");
+    let icon_img = image::load_from_memory(icon_png)
+        .expect("Failed to load tray icon")
+        .to_rgba8();
+    let (w, h) = (icon_img.width(), icon_img.height());
+    let icon = Image::new(icon_img.as_raw(), w, h);
     TrayIconBuilder::new()
-        .icon_as_template(true)
+        .icon(icon)
         .menu(&menu)
         .tooltip("Deck")
         .on_menu_event(|app, event| match event.id.as_ref() {
             "show" => {
                 if let Some(window) = app.get_webview_window("main") {
                     let _ = window.show();
+                    let _ = window.unminimize();
                     let _ = window.set_focus();
                 }
             }
@@ -106,14 +116,13 @@ fn setup_tray(app: &tauri::App) -> Result<(), Box<dyn std::error::Error>> {
                 ..
             } = event
             {
+                // Show and focus on single click (don't toggle to avoid
+                // Windows double-click causing flicker)
                 let app = tray.app_handle();
                 if let Some(window) = app.get_webview_window("main") {
-                    if window.is_visible().unwrap_or(false) {
-                        let _ = window.hide();
-                    } else {
-                        let _ = window.show();
-                        let _ = window.set_focus();
-                    }
+                    let _ = window.show();
+                    let _ = window.unminimize();
+                    let _ = window.set_focus();
                 }
             }
         })
@@ -133,6 +142,17 @@ pub fn run() {
         .plugin(tauri_plugin_updater::Builder::new().build())
         .plugin(tauri_plugin_single_instance::init(|_, _, _| {}))
         .plugin(tauri_plugin_global_shortcut::Builder::new().build())
+        .plugin(
+            tauri_plugin_log::Builder::new()
+                .targets([
+                    Target::new(TargetKind::LogDir {
+                        file_name: Some("deck".into()),
+                    }),
+                    Target::new(TargetKind::Stdout),
+                ])
+                .level(log::LevelFilter::Info)
+                .build(),
+        )
         .manage(HardwareMonitor::new())
         .invoke_handler(tauri::generate_handler![
             commands::system::get_system_info,
@@ -196,7 +216,11 @@ pub fn run() {
             commands::tools::launch_builtin_tool,
         ])
         .setup(|app| {
-            setup_tray(app)?;
+            log::info!("Deck v{} 启动", env!("CARGO_PKG_VERSION"));
+            setup_tray(app).map_err(|e| {
+                eprintln!("托盘初始化失败: {}", e);
+                e
+            })?;
             Ok(())
         })
         .on_window_event(|window, event| {

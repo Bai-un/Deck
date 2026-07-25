@@ -1,7 +1,7 @@
 {
   "identifier": "default",
   "description": "Capability for all windows",
-  "windows": ["main", "widget", "tray-menu", "overlay"],
+  "windows": ["main", "widget", "tray-menu", "overlay", "color-filter"],
   "permissions": [
     "core:default",
     "core:window:default",
@@ -12,7 +12,13 @@
     "core:window:allow-is-maximized",
     "core:window:allow-show",
     "core:window:allow-hide",
+    "core:window:allow-unminimize",
     "core:window:allow-set-focus",
+    "core:window:allow-start-dragging",
+    "core:window:allow-set-size",
+    "core:window:allow-set-position",
+    "core:window:allow-set-always-on-top",
+    "core:window:allow-set-skip-taskbar",
     "shell:allow-open",
     "store:default",
     "dialog:default",

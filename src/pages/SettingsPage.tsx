@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import {
   Flex, Heading, Text, VStack, HStack, Switch, Box, RadioGroup, Radio, Button,
-  useToast, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalFooter,
+  useToast,
   AlertDialog, AlertDialogOverlay, AlertDialogContent, AlertDialogHeader, AlertDialogBody, AlertDialogFooter,
 } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
@@ -14,6 +14,7 @@ export function SettingsPage() {
   const toast = useToast()
   const [aboutOpen, setAboutOpen] = useState(false)
   const [resetOpen, setResetOpen] = useState(false)
+  const cancelRef = useRef(null)
   const {
     language,
     accentColor,
@@ -182,7 +183,7 @@ export function SettingsPage() {
       <AboutModal isOpen={aboutOpen} onClose={() => setAboutOpen(false)} appVersion="0.1.0" />
 
       {/* Reset confirmation */}
-      <AlertDialog isOpen={resetOpen} onClose={() => setResetOpen(false)} leastDestructiveRef={undefined} isCentered>
+      <AlertDialog isOpen={resetOpen} onClose={() => setResetOpen(false)} leastDestructiveRef={cancelRef} isCentered>
         <AlertDialogOverlay bg="rgba(0,0,0,0.6)">
           <AlertDialogContent bg="#161B22" border="1px solid" borderColor="#30363D" borderRadius="16px">
             <AlertDialogHeader color="#E6EDF3" fontSize="sm" fontWeight={600}>确定要重置所有设置到默认值吗？</AlertDialogHeader>

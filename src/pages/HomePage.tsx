@@ -106,7 +106,6 @@ export function HomePage() {
   const memTotal = snapshot?.memory?.total_bytes
   const memPercent = snapshot?.memory?.usage_percent
   const diskRead = snapshot?.disks?.[0]?.read_bytes_per_sec
-  const diskWrite = snapshot?.disks?.[0]?.write_bytes_per_sec
 
   return (
     <PageContainer>

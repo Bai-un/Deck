@@ -3,8 +3,6 @@ import { Box, SimpleGrid, Flex, Text } from '@chakra-ui/react'
 import { HardDrive, PenLine, Download, Terminal } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { PageContainer } from '../components/ui/PageContainer'
-import { useHardwareStore } from '../stores/useHardwareStore'
-
 const toolCards = [
   {
     icon: HardDrive,
