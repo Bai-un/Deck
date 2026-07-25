@@ -18,7 +18,6 @@ src-tauri/target/
 
 # Tauri generated
 src-tauri/gen/
-src-tauri/icons/
 
 # TypeScript build info
 *.tsbuildinfo
