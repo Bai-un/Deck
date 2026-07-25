@@ -1,0 +1,337 @@
+{
+  "app": {
+    "name": "Deck",
+    "tagline": "轻量级 PC 工具箱"
+  },
+  "titleBar": {
+    "minimize": "最小化",
+    "maximize": "最大化",
+    "restore": "还原",
+    "close": "关闭"
+  },
+  "nav": {
+    "home": "首页",
+    "hardware": "硬件监控",
+    "optimize": "系统优化",
+    "display": "显示增强",
+    "tools": "实用工具",
+    "settings": "设置",
+    "launcher": "启动器"
+  },
+  "common": {
+    "apply": "应用",
+    "cancel": "取消",
+    "save": "保存",
+    "reset": "重置",
+    "enable": "启用",
+    "disable": "禁用",
+    "loading": "加载中...",
+    "success": "操作成功",
+    "error": "操作失败"
+  },
+  "settings": {
+    "title": "设置",
+    "general": "通用",
+    "language": "语言",
+    "theme": "主题",
+    "accentColor": "强调色",
+    "autoStart": "开机启动",
+    "minimizeToTray": "关闭时最小化到托盘",
+    "about": "关于",
+    "version": "版本"
+  },
+  "hardware": {
+    "title": "硬件监控",
+    "detail": "详情",
+    "cpu": "处理器",
+    "gpu": "显卡",
+    "memory": "内存",
+    "disk": "磁盘",
+    "system": "系统",
+    "os": "操作系统",
+    "osVersion": "版本",
+    "hostname": "主机名",
+    "usage": "使用率",
+    "temperature": "温度",
+    "frequency": "频率",
+    "power": "功耗",
+    "fanSpeed": "风扇",
+    "vram": "显存",
+    "coreCount": "核心数",
+    "threadCount": "线程数",
+    "brand": "型号",
+    "vendor": "厂商",
+    "driver": "驱动版本",
+    "totalMemory": "总内存",
+    "usedMemory": "已用内存",
+    "availableMemory": "可用内存",
+    "swap": "交换空间",
+    "readSpeed": "读取速度",
+    "writeSpeed": "写入速度",
+    "capacity": "容量",
+    "filesystem": "文件系统",
+    "diskType": "磁盘类型",
+    "nvidiaRequired": "需要 NVIDIA GPU 以获取详细数据",
+    "monitorUnavailable": "详细监控不可用",
+    "widget": "悬浮窗",
+    "overlay": "悬浮面板",
+    "showWidget": "显示悬浮窗",
+    "hideWidget": "隐藏悬浮窗",
+    "showOverlay": "显示悬浮面板",
+    "hideOverlay": "隐藏悬浮面板",
+    "removable": "可移动"
+  },
+  "launcher": {
+    "title": "快捷启动器",
+    "addApp": "添加程序",
+    "launch": "启动",
+    "remove": "删除",
+    "rename": "重命名",
+    "openLocation": "打开文件位置",
+    "confirmDelete": "确定要删除这个启动项吗？",
+    "emptyTitle": "还没有添加任何程序",
+    "emptyDesc": "点击下方按钮添加你的第一个程序",
+    "selectExe": "选择应用程序",
+    "customName": "自定义名称（可选）",
+    "addSuccess": "添加成功",
+    "launchFailed": "启动失败"
+  },
+  "pages": {
+    "home": {
+      "title": "首页",
+      "desc": "系统概览与快捷操作",
+      "overview": "系统概览",
+      "quickActions": "快捷操作"
+    },
+    "hardware": {
+      "title": "硬件监控",
+      "desc": "实时监控 CPU、内存、磁盘、GPU 状态",
+      "comingSoon": "开发中 — 实时硬件监控功能将在后续版本上线"
+    },
+    "optimize": {
+      "title": "系统优化",
+      "desc": "一键清理、启动项管理、服务优化",
+      "comingSoon": "开发中 — 系统优化功能将在后续版本上线"
+    },
+    "display": {
+      "title": "显示增强",
+      "desc": "屏幕色彩滤镜、DLSS 预设、分辨率工具与覆盖面板配置"
+    },
+    "tools": {
+      "title": "实用工具",
+      "desc": "系统工具合集，提升工作效率",
+      "comingSoon": "开发中 — 更多实用工具将在后续版本上线"
+    },
+    "launcher": {
+      "title": "快捷启动器",
+      "desc": "添加并快速启动你常用的程序"
+    }
+  },
+  "cleanup": {
+    "memory": {
+      "title": "内存清理",
+      "currentUsage": "当前使用",
+      "available": "可用",
+      "cleanup": "一键清理内存",
+      "cleaning": "清理中...",
+      "freed": "释放了 {{size}}",
+      "lastCleanup": "上次清理"
+    },
+    "storage": {
+      "title": "存储清理",
+      "scan": "扫描磁盘",
+      "scanning": "扫描中...",
+      "scanResult": "扫描结果",
+      "totalSize": "总计",
+      "selected": "已选择",
+      "cleanSelected": "清理选中项目",
+      "confirmClean": "确定清理 {{size}} 的文件？",
+      "cleanResult": "释放了 {{size}}，删除了 {{count}} 个文件",
+      "skippedFiles": "{{count}} 个文件因被占用跳过"
+    },
+    "shader": {
+      "title": "着色器缓存清理",
+      "totalCache": "总计缓存",
+      "cleanAll": "全选并清理",
+      "cleanSelected": "清理选中",
+      "warning": "清理后游戏首次启动可能需要重新编译着色器，会出现短暂卡顿",
+      "cleanResult": "释放了 {{size}} 着色器缓存"
+    }
+  },
+  "tuning": {
+    "network": {
+      "title": "网络调优",
+      "tcpSection": "TCP 优化",
+      "dnsSection": "DNS",
+      "optimizeAll": "一键全部优化",
+      "resetDefaults": "恢复默认设置",
+      "needsAdmin": "部分设置需要管理员权限，请右键以管理员身份运行 Deck",
+      "needsRestart": "需要重启网络适配器才能生效"
+    },
+    "power": {
+      "title": "电源管理",
+      "currentPlan": "当前方案",
+      "builtinPlans": "系统方案",
+      "customPlan": "自定义方案",
+      "switch": "切换",
+      "createAndActivate": "创建并激活",
+      "delete": "删除",
+      "deckPlan": "Deck 极致性能",
+      "deckPlanDesc": "CPU 100% / USB 不挂起 / 硬盘不休眠"
+    },
+    "startup": {
+      "title": "启动项管理",
+      "totalItems": "共 {{count}} 项",
+      "enabledItems": "已启用 {{count}}",
+      "enable": "启用",
+      "disable": "禁用",
+      "openLocation": "打开位置",
+      "confirmDelete": "确定要从启动项中删除吗？",
+      "impact": {
+        "high": "高影响",
+        "medium": "中影响",
+        "low": "低影响",
+        "none": "无影响"
+      }
+    },
+    "peripheral": {
+      "title": "外设优化",
+      "mouse": "鼠标",
+      "keyboard": "键盘",
+      "usb": "USB",
+      "optimizeAll": "一键全部优化",
+      "resetDefaults": "恢复默认设置"
+    },
+    "common": {
+      "optimized": "已优化",
+      "notOptimized": "未优化",
+      "riskLow": "低风险",
+      "riskMedium": "中风险",
+      "riskHigh": "高风险",
+      "needsRestart": "需重启",
+      "currentValue": "当前值"
+    }
+  },
+  "display": {
+    "filter": {
+      "title": "色彩滤镜",
+      "desc": "护眼模式、夜视、色盲辅助",
+      "presets": "预设滤镜",
+      "custom": "自定义",
+      "eyeProtection": "护眼模式",
+      "nightVision": "夜视模式",
+      "colorBlind": "色盲辅助",
+      "intensity": "滤镜强度",
+      "redChannel": "红色通道",
+      "greenChannel": "绿色通道",
+      "blueChannel": "蓝色通道",
+      "apply": "应用",
+      "applyCustom": "应用自定义滤镜",
+      "remove": "关闭滤镜"
+    },
+    "dlss": {
+      "title": "DLSS 预设",
+      "desc": "配置 NVIDIA DLSS 预设",
+      "needsNvidia": "需要 NVIDIA GPU",
+      "renderScale": "渲染比例",
+      "quality": "质量",
+      "balanced": "平衡",
+      "performance": "性能",
+      "ultraPerformance": "超级性能"
+    },
+    "resolution": {
+      "title": "分辨率工具",
+      "desc": "快捷切换分辨率与自定义计算",
+      "current": "当前",
+      "native": "原生",
+      "quickPresets": "快捷方案",
+      "customCalc": "自定义计算",
+      "targetRatio": "目标宽高比",
+      "scalePercent": "缩放比例",
+      "calcResult": "计算结果",
+      "refreshRate": "刷新率",
+      "apply": "应用分辨率",
+      "resetNative": "恢复原生",
+      "autoRevert": "切换分辨率后如显示异常，等待 15 秒将自动恢复"
+    },
+    "overlay": {
+      "title": "覆盖面板",
+      "desc": "配置覆盖面板显示项与外观",
+      "displayItems": "显示项目",
+      "appearance": "外观设置",
+      "position": "位置",
+      "positions": {
+        "topLeft": "左上角",
+        "topRight": "右上角",
+        "bottomLeft": "左下角",
+        "bottomRight": "右下角"
+      },
+      "opacity": "透明度",
+      "fontSize": "字号",
+      "backgroundBlur": "背景模糊",
+      "refreshInterval": "刷新间隔",
+      "enable": "开启覆盖面板",
+      "save": "保存配置"
+    },
+    "vertical": {
+      "title": "悬浮信息栏",
+      "desc": "侧边悬浮信息栏自定义",
+      "compactMode": "紧凑模式",
+      "detailedMode": "详细模式",
+      "dragToSort": "拖拽排序显示项",
+      "preview": "预览效果"
+    }
+  },
+  "tools": {
+    "diskHealth": {
+      "title": "磁盘健康检测",
+      "healthPercent": "健康度",
+      "temperature": "温度",
+      "powerOnHours": "通电时长",
+      "firmware": "固件",
+      "interface": "接口",
+      "smartAttributes": "S.M.A.R.T. 属性",
+      "status": {
+        "good": "良好",
+        "caution": "注意",
+        "bad": "危险"
+      }
+    },
+    "gpuRename": {
+      "title": "GPU 改名",
+      "needsAdmin": "此功能需要管理员权限，修改后需重启生效",
+      "originalName": "原始名称",
+      "currentName": "当前名称",
+      "newName": "新名称",
+      "apply": "应用改名",
+      "restore": "恢复原始名称",
+      "notRenamed": "未修改",
+      "renamed": "已修改",
+      "templates": "常用改名模板",
+      "restartRequired": "需要重启计算机才能生效"
+    },
+    "nvidiaDriver": {
+      "title": "NVIDIA 驱动管理",
+      "noNvidia": "未检测到 NVIDIA GPU，此功能不可用",
+      "installedVersion": "已安装版本",
+      "releaseDate": "发布日期",
+      "cudaVersion": "CUDA 版本",
+      "latestVersion": "最新版本",
+      "updateAvailable": "有更新可用",
+      "upToDate": "已是最新版本",
+      "goToDownload": "前往 NVIDIA 官网下载",
+      "checkFailed": "无法检查更新（网络错误）"
+    },
+    "builtin": {
+      "title": "系统工具",
+      "search": "搜索工具...",
+      "categories": {
+        "system": "系统",
+        "systemInfo": "系统信息",
+        "network": "网络",
+        "disk": "磁盘",
+        "security": "安全"
+      }
+    }
+  }
+}

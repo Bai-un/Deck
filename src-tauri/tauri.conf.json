@@ -1,0 +1,110 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "Deck",
+  "version": "0.1.0",
+  "identifier": "com.deck.app",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://127.0.0.1:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Deck",
+        "label": "main",
+        "width": 1230,
+        "height": 771,
+        "minWidth": 1230,
+        "minHeight": 771,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": false,
+        "devtools": true
+      },
+      {
+        "title": "Deck Widget",
+        "label": "widget",
+        "width": 260,
+        "height": 42,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "visible": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "url": "/widget"
+      },
+      {
+        "title": "Deck Tray Menu",
+        "label": "tray-menu",
+        "width": 190,
+        "height": 140,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "visible": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "url": "/tray-menu"
+      },
+      {
+        "title": "Deck Overlay",
+        "label": "overlay",
+        "width": 220,
+        "height": 400,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "visible": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "url": "/overlay"
+      },
+      {
+        "title": "Deck Color Filter",
+        "label": "color-filter",
+        "width": 1920,
+        "height": 1080,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "visible": false,
+        "skipTaskbar": true,
+        "shadow": false,
+        "url": "/color-filter"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "nsis": {
+        "installMode": "currentUser",
+        "languages": ["SimpChinese", "English"],
+        "displayLanguageSelector": true,
+        "installerIcon": "icons/icon.ico"
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": [],
+      "pubkey": ""
+    }
+  }
+}

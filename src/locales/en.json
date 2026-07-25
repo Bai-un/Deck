@@ -1,0 +1,337 @@
+{
+  "app": {
+    "name": "Deck",
+    "tagline": "Lightweight PC Toolkit"
+  },
+  "titleBar": {
+    "minimize": "Minimize",
+    "maximize": "Maximize",
+    "restore": "Restore",
+    "close": "Close"
+  },
+  "nav": {
+    "home": "Home",
+    "hardware": "Hardware",
+    "optimize": "Optimize",
+    "display": "Display",
+    "tools": "Tools",
+    "settings": "Settings",
+    "launcher": "Launcher"
+  },
+  "common": {
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "save": "Save",
+    "reset": "Reset",
+    "enable": "Enable",
+    "disable": "Disable",
+    "loading": "Loading...",
+    "success": "Operation successful",
+    "error": "Operation failed"
+  },
+  "settings": {
+    "title": "Settings",
+    "general": "General",
+    "language": "Language",
+    "theme": "Theme",
+    "accentColor": "Accent Color",
+    "autoStart": "Auto Start",
+    "minimizeToTray": "Minimize to tray on close",
+    "about": "About",
+    "version": "Version"
+  },
+  "hardware": {
+    "title": "Hardware Monitor",
+    "detail": "Details",
+    "cpu": "CPU",
+    "gpu": "GPU",
+    "memory": "Memory",
+    "disk": "Disk",
+    "system": "System",
+    "os": "OS",
+    "osVersion": "Version",
+    "hostname": "Hostname",
+    "usage": "Usage",
+    "temperature": "Temperature",
+    "frequency": "Frequency",
+    "power": "Power",
+    "fanSpeed": "Fan",
+    "vram": "VRAM",
+    "coreCount": "Cores",
+    "threadCount": "Threads",
+    "brand": "Model",
+    "vendor": "Vendor",
+    "driver": "Driver",
+    "totalMemory": "Total Memory",
+    "usedMemory": "Used Memory",
+    "availableMemory": "Available Memory",
+    "swap": "Swap",
+    "readSpeed": "Read Speed",
+    "writeSpeed": "Write Speed",
+    "capacity": "Capacity",
+    "filesystem": "Filesystem",
+    "diskType": "Disk Type",
+    "nvidiaRequired": "NVIDIA GPU required for detailed monitoring",
+    "monitorUnavailable": "Detailed monitoring unavailable",
+    "widget": "Widget",
+    "overlay": "Overlay",
+    "showWidget": "Show Widget",
+    "hideWidget": "Hide Widget",
+    "showOverlay": "Show Overlay",
+    "hideOverlay": "Hide Overlay",
+    "removable": "Removable"
+  },
+  "launcher": {
+    "title": "Quick Launch",
+    "addApp": "Add App",
+    "launch": "Launch",
+    "remove": "Delete",
+    "rename": "Rename",
+    "openLocation": "Open file location",
+    "confirmDelete": "Are you sure you want to delete this item?",
+    "emptyTitle": "No apps added yet",
+    "emptyDesc": "Click the button below to add your first app",
+    "selectExe": "Select Application",
+    "customName": "Custom name (optional)",
+    "addSuccess": "Added successfully",
+    "launchFailed": "Failed to launch"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "desc": "System overview & quick actions",
+      "overview": "System Overview",
+      "quickActions": "Quick Actions"
+    },
+    "hardware": {
+      "title": "Hardware",
+      "desc": "Real-time CPU, memory, disk & GPU monitoring",
+      "comingSoon": "Coming soon — real-time hardware monitoring will be available in a future release"
+    },
+    "optimize": {
+      "title": "Optimize",
+      "desc": "One-click cleanup, startup management, service optimization",
+      "comingSoon": "Coming soon — system optimization will be available in a future release"
+    },
+    "display": {
+      "title": "Display",
+      "desc": "Color filters, DLSS presets, resolution tools & overlay configuration"
+    },
+    "tools": {
+      "title": "Tools",
+      "desc": "System utilities to boost productivity",
+      "comingSoon": "Coming soon — more utilities will be available in a future release"
+    },
+    "launcher": {
+      "title": "Quick Launch",
+      "desc": "Add and launch your favorite apps"
+    }
+  },
+  "cleanup": {
+    "memory": {
+      "title": "Memory Cleanup",
+      "currentUsage": "Current Usage",
+      "available": "Available",
+      "cleanup": "Clean Up Memory",
+      "cleaning": "Cleaning...",
+      "freed": "Freed {{size}}",
+      "lastCleanup": "Last Cleanup"
+    },
+    "storage": {
+      "title": "Storage Cleanup",
+      "scan": "Scan Disk",
+      "scanning": "Scanning...",
+      "scanResult": "Scan Results",
+      "totalSize": "Total",
+      "selected": "Selected",
+      "cleanSelected": "Clean Selected",
+      "confirmClean": "Clean {{size}} of files?",
+      "cleanResult": "Freed {{size}}, deleted {{count}} files",
+      "skippedFiles": "{{count}} files skipped (in use)"
+    },
+    "shader": {
+      "title": "Shader Cache",
+      "totalCache": "Total Cache",
+      "cleanAll": "Clean All",
+      "cleanSelected": "Clean Selected",
+      "warning": "Clearing shader cache may cause stutter in games on first launch after cleanup",
+      "cleanResult": "Freed {{size}} of shader cache"
+    }
+  },
+  "tuning": {
+    "network": {
+      "title": "Network Tuning",
+      "tcpSection": "TCP Optimization",
+      "dnsSection": "DNS",
+      "optimizeAll": "Optimize All",
+      "resetDefaults": "Reset to Default",
+      "needsAdmin": "Some settings require administrator privileges. Please run Deck as administrator.",
+      "needsRestart": "Network adapter restart required"
+    },
+    "power": {
+      "title": "Power Management",
+      "currentPlan": "Current Plan",
+      "builtinPlans": "System Plans",
+      "customPlan": "Custom Plan",
+      "switch": "Switch",
+      "createAndActivate": "Create & Activate",
+      "delete": "Delete",
+      "deckPlan": "Deck Extreme Performance",
+      "deckPlanDesc": "CPU 100% / USB no suspend / HDD no sleep"
+    },
+    "startup": {
+      "title": "Startup Manager",
+      "totalItems": "{{count}} items",
+      "enabledItems": "{{count}} enabled",
+      "enable": "Enable",
+      "disable": "Disable",
+      "openLocation": "Open Location",
+      "confirmDelete": "Delete this startup item?",
+      "impact": {
+        "high": "High Impact",
+        "medium": "Medium Impact",
+        "low": "Low Impact",
+        "none": "No Impact"
+      }
+    },
+    "peripheral": {
+      "title": "Peripheral Optimization",
+      "mouse": "Mouse",
+      "keyboard": "Keyboard",
+      "usb": "USB",
+      "optimizeAll": "Optimize All",
+      "resetDefaults": "Reset to Default"
+    },
+    "common": {
+      "optimized": "Optimized",
+      "notOptimized": "Not Optimized",
+      "riskLow": "Low Risk",
+      "riskMedium": "Medium Risk",
+      "riskHigh": "High Risk",
+      "needsRestart": "Restart Required",
+      "currentValue": "Current"
+    }
+  },
+  "display": {
+    "filter": {
+      "title": "Color Filter",
+      "desc": "Eye protection, night vision, color blind assist",
+      "presets": "Presets",
+      "custom": "Custom",
+      "eyeProtection": "Eye Protection",
+      "nightVision": "Night Vision",
+      "colorBlind": "Color Blind Assist",
+      "intensity": "Intensity",
+      "redChannel": "Red Channel",
+      "greenChannel": "Green Channel",
+      "blueChannel": "Blue Channel",
+      "apply": "Apply",
+      "applyCustom": "Apply Custom",
+      "remove": "Remove Filter"
+    },
+    "dlss": {
+      "title": "DLSS Preset",
+      "desc": "Configure NVIDIA DLSS presets",
+      "needsNvidia": "NVIDIA GPU required",
+      "renderScale": "Render Scale",
+      "quality": "Quality",
+      "balanced": "Balanced",
+      "performance": "Performance",
+      "ultraPerformance": "Ultra Performance"
+    },
+    "resolution": {
+      "title": "Resolution Tools",
+      "desc": "Quick resolution switching & custom calculator",
+      "current": "Current",
+      "native": "Native",
+      "quickPresets": "Quick Presets",
+      "customCalc": "Custom Calculator",
+      "targetRatio": "Aspect Ratio",
+      "scalePercent": "Scale",
+      "calcResult": "Result",
+      "refreshRate": "Refresh Rate",
+      "apply": "Apply",
+      "resetNative": "Reset to Native",
+      "autoRevert": "Will auto-revert after 15 seconds if display is abnormal"
+    },
+    "overlay": {
+      "title": "Overlay Panel",
+      "desc": "Configure overlay display items & appearance",
+      "displayItems": "Display Items",
+      "appearance": "Appearance",
+      "position": "Position",
+      "positions": {
+        "topLeft": "Top Left",
+        "topRight": "Top Right",
+        "bottomLeft": "Bottom Left",
+        "bottomRight": "Bottom Right"
+      },
+      "opacity": "Opacity",
+      "fontSize": "Font Size",
+      "backgroundBlur": "Background Blur",
+      "refreshInterval": "Refresh Interval",
+      "enable": "Enable Overlay",
+      "save": "Save Config"
+    },
+    "vertical": {
+      "title": "Side Overlay",
+      "desc": "Vertical info bar customization",
+      "compactMode": "Compact Mode",
+      "detailedMode": "Detailed Mode",
+      "dragToSort": "Drag to reorder items",
+      "preview": "Preview"
+    }
+  },
+  "tools": {
+    "diskHealth": {
+      "title": "Disk Health",
+      "healthPercent": "Health",
+      "temperature": "Temperature",
+      "powerOnHours": "Power On Hours",
+      "firmware": "Firmware",
+      "interface": "Interface",
+      "smartAttributes": "S.M.A.R.T. Attributes",
+      "status": {
+        "good": "Good",
+        "caution": "Caution",
+        "bad": "Bad"
+      }
+    },
+    "gpuRename": {
+      "title": "GPU Rename",
+      "needsAdmin": "Requires administrator privileges, changes take effect after restart",
+      "originalName": "Original Name",
+      "currentName": "Current Name",
+      "newName": "New Name",
+      "apply": "Apply",
+      "restore": "Restore Original",
+      "notRenamed": "Not Modified",
+      "renamed": "Modified",
+      "templates": "Rename Templates",
+      "restartRequired": "Restart required to take effect"
+    },
+    "nvidiaDriver": {
+      "title": "NVIDIA Driver Manager",
+      "noNvidia": "No NVIDIA GPU detected",
+      "installedVersion": "Installed Version",
+      "releaseDate": "Release Date",
+      "cudaVersion": "CUDA Version",
+      "latestVersion": "Latest Version",
+      "updateAvailable": "Update Available",
+      "upToDate": "Up to Date",
+      "goToDownload": "Download from NVIDIA Website",
+      "checkFailed": "Failed to check for updates"
+    },
+    "builtin": {
+      "title": "System Tools",
+      "search": "Search tools...",
+      "categories": {
+        "system": "System",
+        "systemInfo": "System Info",
+        "network": "Network",
+        "disk": "Disk",
+        "security": "Security"
+      }
+    }
+  }
+}
